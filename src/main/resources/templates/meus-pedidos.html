@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pedidos.css">
+    <link rel="shortcut icon" href="/imagens/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Bichó | Meus Pedidos</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/imagens/logo-completo-03.png" alt="Logo Bichó" id="logo">
+        </div>
+        <div class="icones">
+			<a href="/"><img src="/imagens/home.png" alt="Home"></a>
+			<a href="/carrinho" class="icone-carrinho"><img src="/imagens/cart.png" alt="Carrinho"></a>
+			<a th:href="${logado ? '/area-cliente' : '/login'}"><img src="/imagens/user.png" alt="Conta"></a>
+        </div>
+    </header>
+    <main>        
+        <div class="ola">
+            <h1>Olá <span th:text="${primeiroNome}"></span></h1>
+        </div>
+
+        <div class="conteudo">
+            <div class="topicos">
+                <p class="atual"><a href="/pedidos">Pedidos</a></p>
+                <p class="secoes"><a href="/vendas">Vendas</a></p>
+                <p class="secoes"><a href="/conta">Conta</a></p>
+                <p class="secoes"><a href="/favoritos">Favoritos</a></p>
+            </div>
+            <div class="pedidos">
+                <div class="pedido" th:each="pedido : ${pedidos}">
+                    <div class="cabecalho">
+                        <p class="id-pedido">ID Pedido</p>
+                        <p class="produto">Produto</p>
+                        <p class="valor">Valor Total</p>
+                        <p class="status">Status</p>
+                    </div>
+                    <div class="detalhamento">
+                        <p class="id-pedido" th:text="${pedido.id}"></p>
+						<div class="produto" id="produtos">
+						    <div th:each="item : ${pedido.itens}" class="produto-linha">
+						        <div class="produto img-nome">
+						            <img th:src="@{/imagens/produtos/{img}(img=${item.imagemProduto})}" alt="Imagem produto">
+						            <p class="preco" th:text="${item.nomeProduto} + ' - R$' + ${item.precoProduto}"></p>
+						        </div>
+						    </div>
+						</div>
+                        <p class="valor valorTotal" th:text="'R$' + ${pedido.valorTotal}"></p>
+                        <p class="status" th:text="${pedido.status}"></p>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </main>
+	
+	<script src="/js/carrinho.js"></script>
+	<script>
+		document.querySelectorAll('.valorTotal').forEach(element => { 
+		 
+		    let precoTexto = element.textContent.trim(); 
+		    let precoNumerico = parseFloat(precoTexto.replace("R$", "").replace(",", "."));
+
+	        let precoFormatado = precoNumerico.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+	        element.textContent = precoFormatado;
+		});
+
+		document.querySelectorAll('.preco').forEach(element => {
+		    let textoAtual = element.textContent.trim();
+
+		    let partes = textoAtual.split(" - R$");
+		    let nomeProduto = partes[0];
+		    let precoTexto = partes[1];
+
+		    let precoNumerico = parseFloat(precoTexto.replace(",", "."));
+
+		    let precoFormatado = precoNumerico.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+		    element.textContent = `${nomeProduto} - ${precoFormatado}`;
+		});
+
+	</script>
+</body>
+</html>

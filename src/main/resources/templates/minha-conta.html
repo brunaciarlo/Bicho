@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/conta.css">
+    <link rel="shortcut icon" href="/imagens/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Bichó | Minha Conta</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/imagens/logo-completo-03.png" alt="Logo Bichó" id="logo">
+        </div>
+        <div class="icones">
+			<a href="/"><img src="/imagens/home.png" alt="Home"></a>
+			<a href="/carrinho" class="icone-carrinho"><img src="/imagens/cart.png" alt="Carrinho"></a>
+			<a th:href="${logado ? '/area-cliente' : '/login'}"><img src="/imagens/user.png" alt="Conta"></a>
+        </div>
+    </header>
+    <main>        
+        <div class="ola">
+            <h1>Olá <span th:text="${primeiroNome}"></span></h1>
+        </div>
+
+        <div class="conteudo">
+            <div class="topicos">
+                <p class="secoes"><a href="/pedidos">Pedidos</a></p>
+                <p class="secoes"><a href="/vendas">Vendas</a></p>
+                <p class="atual" id="conta"><a href="/conta">Conta</a></p>
+                <p class="sub-endereco"><a href="/conta/endereco">Endereço</a></p>
+                <p class="secoes"><a href="/favoritos">Favoritos</a></p>
+            </div>
+            <div class="dados">
+                <h1>Meus Dados</h1>
+                <form action="/conta" method="post" id="form-dados" th:object="${usuario}">
+                    <div class="input-conta">
+                        <label for="nome">Nome</label> <br>
+                        <input type="text" id="nome" name="nome" th:field="*{nome}" required>
+                    </div>
+                    <div class="input-dividido">
+                        <div class="input-conta">
+                            <label for="email">Email</label> <br>
+                            <input type="email" id="email" name="email" th:field="*{email}" required>
+                        </div>
+                        <div class="input-conta">
+                            <label for="dt-nasc">Data de Nascimento</label> <br>
+                            <input type="text" id="dt-nasc" name="data_nascimento" th:field="*{data_nascimento}" oninput="mascaraData(this)">
+                        </div>
+                    </div>
+                    <div class="input-dividido-2">
+                        <div class="input-conta">
+                            <label for="cpf">CPF</label> <br>
+                            <input type="text" id="cpf" name="cpf" th:field="*{cpf}" oninput="mascaraCPF(this)" required>
+                        </div>
+                        <div class="input-conta">
+                            <label for="telefone">Telefone</label> <br>
+                            <input type="tel" id="telefone" name="telefone" th:field="*{telefone}" oninput="mascaraTelefone(this)">
+                        </div>
+                    </div>
+                    <button type="submit" id="botao-salvar" disabled>Salvar alterações</button>
+                </form>
+                <br>
+            </div>
+        </div>
+    </main>
+	
+	<script src="/js/cadastro.js"></script>
+	<script src="/js/carrinho.js"></script>
+</body>
+</html>

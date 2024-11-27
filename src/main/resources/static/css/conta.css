@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+
+    --verde01: #52cc69;
+    --verde02: #209546;
+    --verde03: #145125;
+    --roxo01: #9c5ef2;
+    --roxo02: #6b41a6;
+    --roxo03: #553384;
+
+    --neutro01: #f2f2f2;
+    --neutro02: #bfbfbf;
+    --neutro03: #7f7f7f;
+    --neutro04: #404040;
+    --neutro05: #131313;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--roxo01);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    text-align: center;
+}
+
+.icones{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.icones a img{
+    height: 25px;
+}
+
+.icone-carrinho {
+    position: relative;
+}
+
+.icone-carrinho::after{
+	content: attr(data-contador);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--verde02);
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.icone-carrinho[data-contador]:not([data-contador="0"])::after {
+    visibility: visible;
+}
+
+#logo{
+    height: 55px;
+}
+
+main{
+    flex: 1;
+    margin: 2%;
+}
+
+.ola h1{
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--roxo03);
+    font-variant: small-caps;
+}
+
+.ola h1 span{
+	font-weight: 700;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.topicos{
+    flex: 1;
+}
+
+.dados{
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+}
+
+.secoes{
+    margin-bottom: 10px;
+}
+
+.secoes a:hover{
+    font-size: 19px;
+    color: var(--neutro05);
+    text-decoration: underline;
+}
+
+.secoes a{
+    text-decoration: none;
+    color: var(--neutro04);
+    font-weight: 600;
+    font-size: 18px;
+}
+.atual{
+    margin-bottom: 2px;
+}
+.atual a{
+    text-decoration: none;
+    color: var(--roxo03);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.sub-endereco{
+    margin: 0 0 10px 6px;
+}
+
+.sub-endereco a{
+    text-decoration: none;
+    color: var(--neutro04);
+    font-weight: 500;
+}
+#atual{
+    margin: -5px 0 10px 6px;
+}
+#atual a{
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--roxo03);
+    font-weight: 600;
+}
+
+#atual a:hover{
+    font-size: 18px;
+    cursor: default;
+}
+
+.sub-endereco a:hover{
+    font-size: 17px;
+    color: var(--neutro05);
+    text-decoration: underline;
+}
+
+.dados h1{
+    color: var(--neutro04);
+    font-weight: 800;
+    margin: -10px 0 10px 0;
+}
+
+#form-dados, #form-endereco{
+    max-width: 800px;
+}
+
+.input-conta label{
+    font-size: 20px;
+    color: var(--neutro04);
+    font-weight: 600;
+}
+
+.input-conta input{
+    padding: 13px;
+    height: 40px;
+    width: 100%;
+    margin: 2px 0px 14px 0px;
+    background-color: var(--neutro01);
+    border: none;
+    border-radius: 5px;
+    color: var(--neutro04);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#cep {
+    width: 200px;
+}
+
+.input-dividido, .input-dividido-2, .input-dividido-3, .input-dividido-4 {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.input-dividido .input-conta:nth-child(1) { 
+    flex: 2;
+}
+.input-dividido .input-conta:nth-child(2) { 
+    flex: 1;
+}
+
+.input-dividido-2 .input-conta:nth-child(1) {
+    flex: 1;
+}
+.input-dividido-2 .input-conta:nth-child(2) {
+    flex: 1;
+}
+
+.input-dividido-3 .input-conta:nth-child(1) { 
+    flex: 5;
+}
+.input-dividido-3 .input-conta:nth-child(2) { 
+    flex: 1;
+}
+
+.input-dividido-4 .input-conta:nth-child(1) {
+    flex: 1;
+}
+.input-dividido-4 .input-conta:nth-child(2) {
+    flex: 4;
+}
+.input-dividido-4 .input-conta:nth-child(3) {
+    flex: 6;
+}
+
+.input-conta {
+    width: 100%;
+}
+.input-conta input {
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+#botao-salvar:disabled{
+	background-color: var(--neutro03);	
+	cursor: default;
+}
+
+#botao-salvar:disabled:hover{
+	background-color: var(--neutro03);	
+	transform: none;	
+}
+
+#form-dados button, #form-endereco button{
+    margin: 5px;
+    padding: 5px;
+    height: 40px;
+    width: 180px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--neutro01);
+    background-color: var(--roxo02);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+#form-dados button:hover, #form-endereco button:hover{
+    transform: scale(105%);
+    background-color: var(--roxo01);
+}

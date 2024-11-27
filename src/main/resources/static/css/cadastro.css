@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+
+    --verde01: #52cc69;
+    --verde02: #209546;
+    --verde03: #145125;
+    --roxo01: #9c5ef2;
+    --roxo02: #6b41a6;
+    --roxo03: #553384;
+
+    --neutro01: #f2f2f2;
+    --neutro02: #bfbfbf;
+    --neutro03: #7f7f7f;
+    --neutro04: #404040;
+    --neutro05: #131313;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background: url(../imagens/fundo-patas.png);
+    background-size: 70%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--roxo01);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    text-align: center;
+}
+
+.icones{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.icones a img{
+    height: 25px;
+}
+
+#logo{
+    height: 55px;
+}
+
+main{
+    flex: 1;
+}
+
+.cadastro{
+    width: 800px;
+    background-color: var(--verde01);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px auto;
+    border-radius: 20px;
+    padding-bottom: 32px;
+}
+
+#escrita-cadastro{
+    color: var(--verde03);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin: 20px 0px -12px 0px;
+    font-variant: small-caps;
+    font-weight: 900;
+    
+}
+.fazer-login a{
+    margin: 3px;
+    font-size: 20px;
+    color: var(--roxo03);
+    font-weight: 600;
+}
+
+.fazer-login{
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.fazer-login > a:hover{
+    color: var(--verde03);
+}
+
+#form-cadastro{
+    max-width: 80%;
+}
+
+#form-cadastro input::placeholder{
+    color: var(--neutro02);
+    font-size: 18px;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+.input-cadastro label{
+    font-size: 20px;
+    color: var(--verde03);
+    font-weight: 800;
+}
+
+#cadastro-cep{
+	width: 30%;
+}
+.input-cadastro input{
+    padding: 13px;
+    height: 45px;
+    width: 100%;
+    margin: 2px 0px 14px 0px;
+    background-color: var(--neutro01);
+    border: none;
+    border-radius: 5px;
+    color: var(--neutro04);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.icones-form{
+    color: var(--neutro03);
+    width: 27px;
+}
+
+.input-cadastro input:focus{
+    outline: none;
+}
+
+.input-dividido, .input-dividido-2, .input-dividido-3{
+    display: flex;
+    gap: 10px;
+}
+
+.input-dividido .input-cadastro:nth-child(1), .input-cadastro:nth-child(2) { 
+    flex: 3;
+}
+
+.input-dividido .input-cadastro:nth-child(3) {
+    flex: 4;
+}
+
+.input-dividido-2 .input-cadastro:nth-child(1) {
+    flex: 15;
+}
+
+.input-dividido-3 .input-cadastro:nth-child(1) {
+    flex: 1;
+}
+.input-dividido-3 .input-cadastro:nth-child(2) {
+    flex: 3;
+}
+.input-dividido-3 .input-cadastro:nth-child(3) {
+    flex: 4;
+}
+
+.input-dividido .input-cadastro input{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#form-cadastro button{
+    margin: 5px;
+    padding: 5px;
+    height: 40px;
+    width: 120px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--neutro01);
+    background-color: var(--verde03);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+#form-cadastro button:hover{
+    background-color: var(--verde02);
+    transform: scale(105%);
+}
+
+a{
+    text-decoration: none;
+    color: var(--neutro05);
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="imagens/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Bichó | Página Inicial</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo-completo-03.png" alt="Logo Bichó" id="logo">
+        </div>
+        <div class="icones">
+            <a href="index.html"><img src="imagens/home.png" alt="Icone1"></a>
+            <a href="carrinho.html"><img src="imagens/cart.png" alt="Icone1"></a>
+            <a href="login.html"><img src="imagens/user.png" alt="Icone1"></a>
+        </div>
+    </header>
+    <main>
+        <div id="categorias">
+            <a href="cachorro.html">Cachorro</a>
+            <a href="gato.html">Gato</a>
+            <a href="outros.html">Outros</a>
+            <a href="https://forms.gle/L6kxbW3JG1Q1iVXT7" target="_blank">Vender</a>
+        </div>
+
+        <div id="buscar">
+            <input type="text" placeholder="Buscar" id="input-buscar">
+            <button id="botao-buscar"> Buscar</button>
+        </div>
+
+        <div class="carrossel">
+            <input type="radio" name="imagens" id="i1" checked>
+            <input type="radio" name="imagens" id="i2">
+            <input type="radio" name="imagens" id="i3">
+            <input type="radio" name="imagens" id="i4">
+
+            <div class="carrossel-img" id="img1">
+                <img src="imagens/carrossel11.jpg" alt="Cachorro">
+                <label for="i4" class="pre"></label>
+                <label for="i2" class="next"></label>
+            </div>
+            <div class="carrossel-img" id="img2">
+                <img src="imagens/carrossel22.jpg" alt="Gato">
+                <label for="i1" class="pre"></label>
+                <label for="i3" class="next"></label>
+            </div>
+            <div class="carrossel-img" id="img3">
+                <img src="imagens/carrossel3.jpg" alt="Porquinho">
+                <label for="i2" class="pre"></label>
+                <label for="i4" class="next"></label>
+            </div>
+            <div class="carrossel-img" id="img4">
+                <img src="imagens/carrossel44.jpg" alt="Peixes">
+                <label for="i3" class="pre"></label>
+                <label for="i1" class="next"></label>
+            </div>
+
+            <div class="carrossel-nav">
+                <label class="botao-carrossel" id="bt1" for="i1"></label>
+                <label class="botao-carrossel" id="bt2" for="i2"></label>
+                <label class="botao-carrossel" id="bt3" for="i3"></label>
+                <label class="botao-carrossel" id="bt4" for="i4"></label>
+            </div>
+        </div>
+
+        <div class="novidades swiper">
+            <p class="categoria">Novidades</p>
+            <div class="cards-produtos">
+                <ul class="lista-cards swiper-wrapper">
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto1.png" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$80,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto2.jpg" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$10,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto3.jpg" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$50,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto4.jpeg" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$30,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto5.jpg" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$70,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto6.jpeg" alt="Produto 6" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$20,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-button-prev swiper-slide-button"></div>
+                <div class="swiper-button-next swiper-slide-button"></div>
+            </div>
+        </div>
+
+        <div class="cachorro swiper">
+            <p class="categoria">Cachorro</p>
+            <div class="cards-produtos">
+                <ul class="lista-cards swiper-wrapper">
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto1.png" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$80,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto2.jpg" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$10,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto3.jpg" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$50,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto4.jpeg" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$30,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto5.jpg" alt="Produto 1" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$70,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <a href="#" class="link-produto">
+                            <img src="imagens/produto6.jpeg" alt="Produto 6" class="imagem-card">
+                            <h2 class="produto-nome">Nome produto</h2>
+                            <p class="produto-descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, ea!</p>
+                            <div class="preco-carrinho">
+                                <span class="preco-produto">R$20,00</span>
+                                <button class="botao-card material-symbols-rounded">add_shopping_cart</button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="swiper-button-prev swiper-slide-button"></div>
+                <div class="swiper-button-next swiper-slide-button"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="esq">
+            <img src="imagens/logo-completo-03.png" alt="Logo Bichó">
+            <p><a href="#">Perguntas frequentes</a></p>
+            <p>Contato</p>
+            <div class="redes-sociais">
+                <a href="#"><img src="imagens/icon-wpp.png" alt="WhatsApp"></a>
+                <a href="#"><img src="imagens/icon-insta.png" alt="Instagram"></a>
+                <a href="#"><img src="imagens/icon-mail.png" alt="E-mail"></a>
+            </div>
+        </div>
+        <div class="dir">
+            <p id="endereco">Av. Bento Gonçalves, 130</p>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.5150344673184!2d-51.21420862367408!3d-30.050768131571147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519785cb9846341%3A0x76a54e5a7265c990!2sAv.%20Bento%20Gon%C3%A7alves%2C%20130%20-%20Partenon%2C%20Porto%20Alegre%20-%20RS%2C%2090650-000!5e0!3m2!1spt-BR!2sbr!4v1730401610636!5m2!1spt-BR!2sbr" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

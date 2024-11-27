@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+
+    --verde01: #52cc69;
+    --verde02: #209546;
+    --verde03: #145125;
+    --roxo01: #9c5ef2;
+    --roxo02: #6b41a6;
+    --roxo03: #553384;
+
+    --neutro01: #f2f2f2;
+    --neutro02: #bfbfbf;
+    --neutro03: #7f7f7f;
+    --neutro04: #404040;
+    --neutro05: #131313;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background: url(../imagens/fundo-patas.png);
+    background-size: 70%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--roxo01);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    text-align: center;
+}
+
+.icones{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.icones a img{
+    height: 25px;
+}
+
+#logo{
+    height: 55px;
+}
+
+main{
+    flex: 1;
+}
+
+.recupera{
+    width: 800px;
+    background-color: var(--verde01);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px auto;
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+
+#escrita-recupera{
+    color: var(--verde03);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin: 20px 0px 15px 0px;
+    font-variant: small-caps;
+    font-weight: 900;
+    
+}
+.input-login{
+    display: flex;
+    align-items: center;
+    background-color: var(--neutro01);
+    padding-left: 15px;
+    border-radius: 10px;
+    margin: 8px;
+    padding: 8px;
+}
+
+.icones-form{
+    color: var(--neutro03);
+    width: 27px;
+}
+
+#form-recupera-senha input{
+    padding: 13px;
+    height: 20px;
+    width: 600px;
+    margin: 5px;
+    background-color: var(--neutro01);
+    border: none;
+    border-radius: 5px;
+    color: var(--neutro04);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#form-recupera-senha input:focus{
+    outline: none;
+}
+
+#form-recupera-senha input::placeholder{
+    color: var(--neutro03);
+    font-size: 22px;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    font-weight: 800;
+}
+#form-recupera-senha button{
+    margin: 5px;
+    padding: 5px 15px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--neutro01);
+    background-color: var(--verde03);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+#form-recupera-senha button:hover{
+    background-color: var(--verde02);
+    transform: scale(105%);
+}
+
+a{
+    text-decoration: none;
+    color: var(--neutro05);
+}
+
+.cadastrar a{
+    margin: 3px;
+    font-size: 22px;
+    color: var(--roxo03);
+    font-weight: 600;
+}
+
+.cadastrar a:hover{
+    color: var(--verde03);
+}
+
+.cadastrar{
+    margin-top: 30px;
+    font-size: 21px;
+}

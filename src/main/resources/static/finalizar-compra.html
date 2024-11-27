@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/finalizar-compra.css">
+    <link rel="shortcut icon" href="imagens/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Bichó | Finalizar compra</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo-completo-03.png" alt="Logo Bichó" id="logo">
+        </div>
+        <div class="icones">
+            <a href="index.html"><img src="imagens/home.png" alt="Icone1"></a>
+            <a href="carrinho.html"><img src="imagens/cart.png" alt="Icone1"></a>
+            <a href="login.html"><img src="imagens/user.png" alt="Icone1"></a>
+        </div>
+    </header>
+    <main>
+        <div id="escrita-carrinho">
+            <p><img src="imagens/bag.png" alt="Icone Carrinho"> Finalizar Compra</p>
+        </div>
+        <div class="conteudo">
+            <div class="itens-entrega">
+                <div class="itens">
+                    <div class="cabecalho">
+                        Itens
+                    </div>
+                    <div class="detalhamento">
+                        <div class="imagem-produto">
+                            <img src="imagens/produto1.png" alt="Imagem produto">
+                        </div>
+                        <div class="nome-preco">
+                                <p>Nome produto</p>
+                                <p>R$50,00</p>
+                        </div>
+                    </div>
+                    <div class="detalhamento">
+                        <div class="imagem-produto">
+                            <img src="imagens/produto2.jpg" alt="Imagem produto">
+                        </div>
+                        <div class="nome-preco">
+                                <p>Nome produto</p>
+                                <p>R$50,00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entrega">
+                    <input type="text" placeholder="Digite seu CEP" id="cep">
+                    <button>Calcular</button>
+                    <div class="opcoes-entrega">
+                        <div class="cabecalho">
+                            Entrega
+                        </div>
+                        <div class="detalhamento-entrega">
+                            <div class="retirada-loja">
+                                <div class="info">
+                                    <input type="radio" name="opcao-entrega" value="retirada" id="retirada">
+                                    <label for="retirada">Retirada na Loja</label>
+                                    <p>Av. Bento Gonçalves, 130</p>
+                                    <p>Disponível 30 minutos após confirmação de pagamento</p>
+                                </div>
+                                <div class="preco">
+                                    <p>Grátis</p>
+                                </div>
+                            </div>
+                            <div class="correios">
+                                <div class="info">
+                                    <input type="radio" name="opcao-entrega" value="sedex" id="sedex">
+                                    <label for="sedex">SEDEX Correios - X dias</label>
+                                    <p>Para CEP XXXXXX-XXX</p>
+                                    <p>Endereço</p>
+                                </div>
+                                <div class="preco">
+                                    <p>R$XX,xx</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagamento">
+                <div class="opcoes-pagamento">
+                    <div class="cabecalho">
+                        Pagamento
+                    </div>
+                    <div class="detalhamento-pagamento">
+                        <div class="opcao-pix">
+                            <img src="imagens/pix.png" alt="Icon Pix">
+                            <p>Pix</p>
+                        </div>
+                        <div class="descricao-pix">
+                            <p>Código disponível na finalização da compra</p>
+                            <p>Confirmação de pagamento instantâneo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="finalizacao">
+                    <div id="div-valor-total">
+                        <p>Valor total: <span id="valor-total">R$100,00</span></p>
+                    </div>
+                    <a href="finalizar-compra.html" id="finalizar-pedido">
+                        <img src="imagens/lock.png" alt="Cadeado">
+                        Confirmar Pedido
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+
+    --verde01: #52cc69;
+    --verde02: #209546;
+    --verde03: #145125;
+    --roxo01: #9c5ef2;
+    --roxo02: #6b41a6;
+    --roxo03: #553384;
+
+    --neutro01: #f2f2f2;
+    --neutro02: #bfbfbf;
+    --neutro03: #7f7f7f;
+    --neutro04: #404040;
+    --neutro05: #131313;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--roxo01);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    text-align: center;
+}
+
+.icones{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.icones a img{
+    height: 25px;
+}
+
+.icone-carrinho {
+    position: relative;
+}
+
+.icone-carrinho::after{
+	content: attr(data-contador);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--verde02);
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.icone-carrinho[data-contador]:not([data-contador="0"])::after {
+    visibility: visible;
+}
+
+#logo{
+    height: 55px;
+}
+
+main{
+    flex: 1;
+}
+
+#categorias{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--verde01);
+    padding: 5px 10px;
+    line-height: auto;
+}
+
+#categorias > a{
+    color: var(--verde03);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#categorias > a:hover{
+    color: var(--verde02);
+}
+
+.conteudo{
+    margin: 70px 15%;
+    display: flex;
+    gap: 50px;
+}
+
+#imagem-produto{
+	aspect-ratio: 1:1;
+    height: 450px;
+    width: 450px;
+    border-radius: 10px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.informacoes{
+    width: 80%;
+}
+
+.descricao{
+    height: 450px;
+}
+
+#nome-produto{
+    font-size: 42px;
+    font-weight: 700;
+    margin: 30px 0 2px 0;
+    color: var(--roxo02);
+}
+
+#preco{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: var(--verde02);
+}
+
+#descricao-produto{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--neutro04);
+    margin: 20px 0 10px 0;
+}
+
+.botoes{
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+}
+
+.botoes button{
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.favoritar{
+    background-color: var(--roxo01);
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desfavoritar{
+    background-color: var(--neutro04);
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bt-add-carrinho{
+    background-color: var(--verde03);
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favoritar img, .desfavoritar img, #bt-add-carrinho img{
+    height: 35px;
+}
+
+.favoritar:hover, .desfavoritar:hover, #bt-add-carrinho:hover{
+    transform: scale(108%);
+}
+
+#bt-comprar{
+    background-color: var(--verde01);
+    color: var(--verde03);
+    width: 110px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+#bt-comprar:hover{
+    background-color: var(--verde03);
+    color: var(--verde01);
+}
+
+.calcula-frete{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.calcula-frete label{
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    font-weight: 600;
+    color: var(--neutro04);
+}
+
+.calcula-frete label img{
+    height: 25px;
+    margin-right: 8px;
+}
+
+.calcula-frete input{
+    border: none;
+    background-color: var(--neutro01);
+    padding: 6px;
+    color: var(--neutro04);
+    font-weight: 500;
+    font-size: 15px;
+    width: 150px;
+    border-radius: 8px;
+}
+
+.calcula-frete button{
+    margin-left: 10px;
+    border: none;
+    background-color: var(--neutro04);
+    color: var(--neutro01);
+    width: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.resultado-frete{
+    background-color: var(--neutro01);
+    padding: 0 20px;
+    border-radius: 10px;
+}
+
+.retirar, .correios, .jadlog{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.retirar p, .correios p, .jadlog p{
+    font-weight: 500;
+    color: var(--neutro04);
+}
+
+.retirar p:last-child, .correios p:last-child, .jadlog p:last-child{
+    font-weight: 700;
+}
+
+.retirar, .correios {
+    border-bottom: 2px solid var(--neutro02);
+}
+
+footer{
+    background-color: var(--roxo01);
+    color: var(--neutro01);
+    margin-top: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+footer img{
+    height: 40px;
+    margin-bottom: 10px;
+}
+footer p{
+    margin-top: 10px;
+}
+footer a{
+    text-decoration: none;
+    color: var(--neutro01);
+}
+
+footer a:hover{
+    color: var(--roxo03);
+    font-size: 20px;
+}
+
+#endereco{
+    margin-bottom: 5px;
+}
+
+.redes-sociais img{
+    margin-top: 5px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.redes-sociais img:hover{
+    transform: scale(115%);
+}

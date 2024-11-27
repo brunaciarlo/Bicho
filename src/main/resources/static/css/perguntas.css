@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+
+    --verde01: #52cc69;
+    --verde02: #209546;
+    --verde03: #145125;
+    --roxo01: #9c5ef2;
+    --roxo02: #6b41a6;
+    --roxo03: #553384;
+
+    --neutro01: #f2f2f2;
+    --neutro02: #bfbfbf;
+    --neutro03: #7f7f7f;
+    --neutro04: #404040;
+    --neutro05: #131313;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background: url(../imagens/fundo-patas.png);
+    background-size: 70%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--roxo01);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    text-align: center;
+}
+
+.icones{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.icones a img{
+    height: 25px;
+}
+
+.icone-carrinho {
+    position: relative;
+}
+
+.icone-carrinho::after{
+	content: attr(data-contador);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--verde02);
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.icone-carrinho[data-contador]:not([data-contador="0"])::after {
+    visibility: visible;
+}
+
+#logo{
+    height: 55px;
+}
+
+main{
+    flex: 1;
+}
+
+.perguntas{
+    width: 800px;
+    background-color: var(--verde01);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px auto;
+    border-radius: 20px;
+}
+
+#escrita-perguntas{
+    color: var(--verde03);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 53px;
+    margin: 20px 0px 15px 0px;
+    font-variant: small-caps;
+    font-weight: 900;
+    
+}
+
+.pergunta{
+	width: 90%;
+	border-bottom: 1px solid var(--verde02);
+}
+
+.duvida{
+	margin-top: 18px;
+	font-size: 23px;
+	font-weight: 700;
+	color: var(--roxo03);
+}
+
+.resposta{
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--neutro05);
+	text-align: justify;	
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+
+.pergunta:last-child{
+	border-bottom:none;
+}
+
+#primeira{
+	margin-top:0px;
+}
+
+.resposta a{
+	font-size: 18px;
+	text-decoration: none;
+	color: var(--roxo03);
+	font-weight: 600;
+}
+
+.resposta a:hover{
+	font-size: 19px;
+	color: var(--verde03);
+}
+
+footer{
+    background-color: var(--roxo01);
+    color: var(--neutro01);
+    margin-top: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+footer img{
+    height: 40px;
+    margin-bottom: 10px;
+}
+footer p{
+    margin-top: 10px;
+}
+footer a{
+    text-decoration: none;
+    color: var(--neutro01);
+}
+
+footer a:hover{
+    color: var(--roxo03);
+    font-size: 20px;
+}
+
+#endereco{
+    margin-bottom: 5px;
+}
+
+.redes-sociais img{
+    margin-top: 5px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.redes-sociais img:hover{
+    transform: scale(115%);
+}

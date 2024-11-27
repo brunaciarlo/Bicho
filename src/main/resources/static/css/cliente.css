@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+
+    --verde01: #52cc69;
+    --verde02: #209546;
+    --verde03: #145125;
+    --roxo01: #9c5ef2;
+    --roxo02: #6b41a6;
+    --roxo03: #553384;
+
+    --neutro01: #f2f2f2;
+    --neutro02: #bfbfbf;
+    --neutro03: #7f7f7f;
+    --neutro04: #404040;
+    --neutro05: #131313;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--roxo01);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    text-align: center;
+}
+
+.icones{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.icones a img{
+    height: 25px;
+}
+
+.icone-carrinho {
+    position: relative;
+}
+
+.icone-carrinho::after{
+	content: attr(data-contador);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--verde02);
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.icone-carrinho[data-contador]:not([data-contador="0"])::after {
+    visibility: visible;
+}
+
+#logo{
+    height: 55px;
+}
+
+main{
+    flex: 1;
+    width: 60%;
+    margin: 25px auto;
+}
+
+.ola{
+    margin: 10px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ola h1{
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--roxo03);
+    font-variant: small-caps;
+}
+
+.ola h1 span{
+	font-weight: 700;
+}
+
+#logout{
+	height: 40px;
+	width: 70px;
+	font-size: 17px;
+	font-weight: 600;
+	background-color: darkred;
+	color: var(--neutro01);
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+.sub-areas{
+    display: flex;
+    gap: 20px;
+    /**/
+    justify-content: space-around;
+}
+
+.area{
+    width: 100%;
+    height: 200px;
+    background-color: var(--verde01);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.area img{
+    max-width: 80%;
+    height: 100px;
+}
+
+.pedidos{
+    margin-left: 25px;
+}
+
+.favoritos{
+    margin-right: 25px;
+}
+
+.pedidos p, .conta p{
+    color: var(--verde03);
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px;
+}
+
+.vendas, .favoritos{
+    background-color: var(--roxo01);
+}
+.vendas p, .favoritos p{
+    color: var(--roxo03);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.sub-areas a{
+    text-decoration: none;
+    color: #131313;
+}
